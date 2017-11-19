@@ -1,0 +1,9 @@
+<h2>Admin Dashboard</h2>
+
+<% users.forEach((user) => { %>
+  <div>
+    <b>Username: </b><%= user.username %> <br>
+    <b>Role: </b><%= user.role %> <br>
+    <a href="/manage/<%= user._id %>/edit">Edit Role</a>
+</div>
+<% }) %>

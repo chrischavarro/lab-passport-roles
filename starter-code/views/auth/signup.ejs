@@ -1,0 +1,19 @@
+<form action="/signup" method="POST">
+
+  <div>
+    <label for="user-password">Username</label>
+    <input type="text" name="username" id="user-username">
+  </div>
+
+  <div>
+    <label for="user-password">Password</label>
+    <input type="text" name="password" id="user-password">
+  </div>
+
+  <% if (typeof message != "undefined") { %>
+   <div class="error-message"><%= message %></div>
+ <% } %>
+
+  <button type="submit">Register</button>
+
+</form>

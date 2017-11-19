@@ -1,0 +1,14 @@
+<h2>Editing User Role</h2>
+
+<%= user.username %>
+
+<form action="/manage/<%= user._id %>" method="post">
+  <label for="user-role">Role</label>
+  <select name="role" id="user-role">
+    <option value="Developer">Developer</option>
+    <option value="TA">TA</option>
+    <option value="">None</option>
+  </select>
+  <br>
+  <button type="submit">Save Changes</button>
+</form>

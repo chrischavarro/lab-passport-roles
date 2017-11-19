@@ -1,0 +1,12 @@
+<h2>Showing Your Enrolled Courses</h2>
+
+<% courses.forEach((course) => { %>
+  <div class="">
+    <b>Name: </b><%= course.name %> <br>
+    <b>Starting Date: </b><%= course.startingDate %> <br>
+    <b>End Date: </b><%= course.endDate %> <br>
+    <b>Level: </b><%= course.level %> <br>
+    <b>Available: </b><%= course.available %> <br>
+  </div>
+  <br>
+<% }) %>

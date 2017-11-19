@@ -1,0 +1,20 @@
+<h2>Showing All Courses</h2>
+
+<% courses.forEach((course) => { %>
+  <div class="">
+    <b>Name: </b><%= course.name %> <br>
+    <b>Starting Date: </b><%= course.startingDate %> <br>
+    <b>End Date: </b><%= course.endDate %> <br>
+    <b>Level: </b><%= course.level %> <br>
+    <b>Available: </b><%= course.available %> <br>
+    <a href="/courses/<%= course._id %>/edit">Edit Course</a> <br>
+    <form action="/courses/<%= course._id %>/delete" method="post">
+      <button type="submit">Delete Course</button>
+    </form>
+  </div>
+  <br>
+<% }) %>
+<% if (typeof message != "undefined") { %>
+ <div class="error-message"><%= message %></div>
+<% } %>
+<a href="/courses/new">Add New Course</a>

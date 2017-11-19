@@ -1,0 +1,18 @@
+<form action="/login" method="POST">
+  <div>
+    <label for="user-username">Username</label>
+    <input type="text" name="username" id="user-username">
+  </div>
+
+  <div>
+    <label for="user-password">Password</label>
+    <input type="text" name="password" id="user-password">
+  </div>
+  <% if (typeof message != "undefined") { %>
+   <div class="error-message"><%= message %></div>
+ <% } %>
+
+  <button type="submit">Log In</button> <br>
+  <a href="/auth/facebook">Login With Facebook</a>
+
+</form>
